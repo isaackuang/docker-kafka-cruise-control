@@ -1,0 +1,19 @@
+#!/command/with-contenv sh
+
+cat << EOF > /opt/cruise-control/config/capacityCores.json
+{
+  "brokerCapacities":[
+    {
+      "brokerId": "-1",
+      "capacity": {
+        "DISK": "300000",
+        "CPU": {"num.cores": "2"},
+        "NW_IN": "5000000",
+        "NW_OUT": "5000000"
+      },
+      "doc": "This is the default capacity. Capacity unit used for disk is in MB, cpu is in number of cores, network throughput is in KB."
+    }
+  ]
+}
+
+EOF

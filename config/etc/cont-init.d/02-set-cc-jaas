@@ -1,0 +1,13 @@
+#!/command/with-contenv sh
+
+cat << EOF >  /opt/cruise-control/config/cruise_control_jaas.conf
+
+KafkaClient {
+  org.apache.kafka.common.security.scram.ScramLoginModule required
+    username="${KAFKA_USERNAME}"
+    password="${KAFKA_PASSWORD}";
+};
+EOF
+
+
+

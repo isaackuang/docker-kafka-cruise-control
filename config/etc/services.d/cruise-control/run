@@ -1,0 +1,4 @@
+#!/command/with-contenv sh
+
+cd /opt/cruise-control
+./kafka-cruise-control-start.sh config/cruisecontrol.properties 9091
