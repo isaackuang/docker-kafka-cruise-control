@@ -1,0 +1,6 @@
+#!/command/with-contenv sh
+
+
+cat << EOF > /opt/cruise-control/cruise-control-ui/dist/static/config.csv
+kafka,${ENV:-default},/kafkacruisecontrol
+EOF
